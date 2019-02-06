@@ -5,7 +5,7 @@ Results: <%= @all_stations.count %>
     <li> <strong>Name: </strong><%= station.name %></li>
     <li> <strong>Fuel Types: </strong><%= station.fuel_types %></li>
     <li> <strong>Street Address: </strong><%= station.street_address %></li>
-    <li> <strong>City: </strong><%= station.city %></li>
-    <li> <strong>Distance: </strong><%= station.distance %> miles</li>
+    <li> <strong>City: </strong><%= station.city %>, <%= station.state %></li>
+    <li> <strong>Distance: </strong><%= station.distance.round(2) %> miles</li>
   </ul>
 <% end %>

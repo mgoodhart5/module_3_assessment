@@ -12,6 +12,7 @@ describe Station do
                   station_name: "Marys",
                   street_address: "301 S First",
                   city: "Montrose",
+                  state: "CO",
                   fuel_type_code: "Propane, Electric",
                   distance: "10 miles",
     }
@@ -20,6 +21,7 @@ describe Station do
     expect(station.name).to eq("Marys")
     expect(station.street_address).to eq("301 S First")
     expect(station.city).to eq("Montrose")
+    expect(station.state).to eq("CO")
     expect(station.fuel_types).to eq("Propane, Electric")
     expect(station.distance).to eq("10 miles")
     expect(station.hours).to eq("24 hrs")
@@ -30,6 +32,7 @@ describe Station do
                   station_name: "Marys",
                   street_address: "301 S First",
                   city: "Montrose",
+                  state: "CO",
                   fuel_type_code: "Propane, Electric",
                   distance: "10",
     }
@@ -38,6 +41,7 @@ describe Station do
                   station_name: "Marys",
                   street_address: "301 S First",
                   city: "Montrose",
+                  state: "CO",
                   fuel_type_code: "Propane, Electric",
                   distance: "20",
     }
@@ -46,6 +50,7 @@ describe Station do
                   station_name: "Marys",
                   street_address: "301 S First",
                   city: "Montrose",
+                  state: "CO",
                   fuel_type_code: "Propane, Electric",
                   distance: "1",
     }

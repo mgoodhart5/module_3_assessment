@@ -1,11 +1,12 @@
 class Station
-  attr_reader :hours, :name, :street_address, :city, :fuel_types, :distance
+  attr_reader :hours, :name, :street_address, :state, :city, :fuel_types, :distance
 
   def initialize(attributes)
     @hours = attributes[:access_days_time]
     @name = attributes[:station_name]
     @street_address = attributes[:street_address]
     @city = attributes[:city]
+    @state = attributes[:state]
     @fuel_types = attributes[:fuel_type_code]
     @distance = attributes[:distance]
   end
