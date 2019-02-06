@@ -24,4 +24,36 @@ describe Station do
     expect(station.distance).to eq("10 miles")
     expect(station.hours).to eq("24 hrs")
   end
+  it '.sort_by_distance' do
+    attributes_1 = {
+                  access_days_time: "24 hrs",
+                  station_name: "Marys",
+                  street_address: "301 S First",
+                  city: "Montrose",
+                  fuel_type_code: "Propane, Electric",
+                  distance: "10",
+    }
+    attributes_2 = {
+                  access_days_time: "24 hrs",
+                  station_name: "Marys",
+                  street_address: "301 S First",
+                  city: "Montrose",
+                  fuel_type_code: "Propane, Electric",
+                  distance: "20",
+    }
+    attributes_3 = {
+                  access_days_time: "24 hrs",
+                  station_name: "Marys",
+                  street_address: "301 S First",
+                  city: "Montrose",
+                  fuel_type_code: "Propane, Electric",
+                  distance: "1",
+    }
+    station_1 = Station.new(attributes_1)
+    station_2 = Station.new(attributes_2)
+    station_3 = Station.new(attributes_3)
+    sorted = [station_3, station_1, station_2]
+
+    expect(Station.sorted_by_distance([station_1, station_2, station_3])).to eq(sorted)
+  end
 end
