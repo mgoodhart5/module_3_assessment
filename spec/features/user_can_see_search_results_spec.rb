@@ -2,12 +2,14 @@ require 'rails_helper'
 
 describe "As a user When I visit /" do
   it 'can fill in the zipcode and be shown results' do
+    visit "/"
     zip = 81401
-    fill_in "input[value='Search by zip...']", with: zip
-    click_on "Search by zip..."
+    fill_in "q", with: zip
+    click_on "Locate"
 
-    expect(path).to eq(search_path)
-    expect(page).to have_content("Stations")
+    expect(current_path).to eq(search_path)
+    expect(page).to have_content("Results: ")
+    expect(page).to have_content("Results: 5")
   end
 end
 
