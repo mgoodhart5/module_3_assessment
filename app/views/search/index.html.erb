@@ -1,11 +1,11 @@
 Results: <%= @all_stations.count %>
-<% @all_stations.each do |station| %>
-  <ul class="station">
-    <li> Hours: <%= station.hours %></li>
-    <li> Name: <%= station.name %></li>
-    <li> Fuel Types: <%= station.fuel_types %></li>
-    <li> Street Address: <%= station.street_address %></li>
-    <li> City: <%= station.city %></li>
-    <li> Distance: <%= station.distance %> miles</li>
+<% @all_stations.each_with_index do |station, index| %>
+  <ul class="station-<%= index %>">
+    <li> <strong>Hours: </strong><%= station.hours %></li>
+    <li> <strong>Name: </strong><%= station.name %></li>
+    <li> <strong>Fuel Types: </strong><%= station.fuel_types %></li>
+    <li> <strong>Street Address: </strong><%= station.street_address %></li>
+    <li> <strong>City: </strong><%= station.city %></li>
+    <li> <strong>Distance: </strong><%= station.distance %> miles</li>
   </ul>
 <% end %>
