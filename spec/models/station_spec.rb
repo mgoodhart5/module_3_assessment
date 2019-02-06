@@ -14,7 +14,6 @@ describe Station do
                   city: "Montrose",
                   fuel_type_code: "Propane, Electric",
                   distance: "10 miles",
-                  access_times: "6am - 10pm"
     }
     station = Station.new(attributes)
 
@@ -23,6 +22,6 @@ describe Station do
     expect(station.city).to eq("Montrose")
     expect(station.fuel_types).to eq("Propane, Electric")
     expect(station.distance).to eq("10 miles")
-    expect(station.access_times).to eq("6am - 10pm")
+    expect(station.hours).to eq("24 hrs")
   end
 end

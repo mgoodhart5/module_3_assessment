@@ -8,7 +8,14 @@ describe "As a user When I visit /" do
     click_on "Locate"
 
     expect(current_path).to eq(search_path)
-    expect(page).to have_content("Results: 5")
+
+    within "#station-0"
+      expect(page).to have_content("Hours: 24 hours daily")
+      expect(page).to have_content("Name: Montrose Memorial Hospital")
+      expect(page).to have_content("Fuel Types: ELEC")
+      expect(page).to have_content("Street Address: 800 S 3rd St")
+      expect(page).to have_content("City: Montrose")
+      expect(page).to have_content("Distance: 1.94081 miles")
   end
 end
 
