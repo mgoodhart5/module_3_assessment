@@ -8,7 +8,6 @@ describe "As a user When I visit /" do
     click_on "Locate"
 
     expect(current_path).to eq(search_path)
-    expect(page).to have_content("Results: ")
     expect(page).to have_content("Results: 5")
   end
 end
