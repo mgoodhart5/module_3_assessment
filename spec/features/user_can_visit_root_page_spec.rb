@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 feature "User can visit root page" do
   scenario "and view navbar contents" do
